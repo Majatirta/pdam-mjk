@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PERUMDAM Maja Tirta Kota Mojokerto - Melayani Air Bersih</title>
+<meta name="description" content="Website resmi PERUMDAM Maja Tirta Kota Mojokerto. Layanan air minum berkualitas, pembayaran tagihan, pengaduan pelanggan, dan informasi terbaru." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+        colors: {
+          brand: {
+            blue: '#0EA5E9',
+            green: '#10B981',
+            gold: '#D4AF37',
+            navy: '#0F172A',
+            light: '#F8FAFC',
+          }
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="font-sans bg-white text-slate-800 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="#beranda" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-l bg-gradient-to-br from-brand-blue to-brand-green flex items-center justify-center shadow-lg shadow-brand-blue/30">
+          <img src="./Gambar/Logo Perumdam Mojokerto.png" alt="Logo" width="70">
+          <!-- <i class="fa-solid fa-droplet text-white text-lg"></i> -->
+        </div>
+        <div class="leading-tight">
+          <div class="font-extrabold text-brand-navy text-base">PERUMDAM</div>
+          <div class="text-xs text-slate-500 -mt-0.5">Maja Tirta Kota Mojokerto</div>
+        </div>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <li><a href="#beranda" class="nav-link">Beranda</a></li>
+        <li><a href="#tentang" class="nav-link">Tentang Kami</a></li>
+        <li><a href="#layanan" class="nav-link">Layanan</a></li>
+        <li><a href="#pembayaran" class="nav-link">Pembayaran</a></li>
+        <li><a href="#informasi" class="nav-link">Informasi</a></li>
+        <li><a href="#kontak" class="nav-link">Hubungi Kami</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#layanan" class="hidden sm:inline-flex items-center gap-2 bg-brand-blue hover:bg-sky-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-brand-blue/30 transition-all hover:-translate-y-0.5">
+          <i class="fa-solid fa-bullhorn"></i> Ajukan Aduan
+        </a>
+        <button id="menu-btn" class="lg:hidden w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-brand-navy">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-slate-100">
+    <ul class="px-4 py-4 space-y-2 text-sm font-medium text-slate-700">
+      <li><a href="#beranda" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-50">Beranda</a></li>
+      <li><a href="#tentang" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-50">Tentang Kami</a></li>
+      <li><a href="#layanan" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-50">Layanan</a></li>
+      <li><a href="#pembayaran" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-50">Pembayaran</a></li>
+      <li><a href="#informasi" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-50">Informasi</a></li>
+      <li><a href="#kontak" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-50">Hubungi Kami</a></li>
+      <li><a href="#layanan" class="mobile-link block text-center bg-brand-blue text-white px-3 py-2.5 rounded-lg">Ajukan Aduan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="beranda" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="./Gambar/hero.png" alt="perumdam" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-navy/90 via-brand-navy/75 to-brand-blue/70"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(14,165,233,0.4),transparent_50%)]"></div>
+  </div>
+
+  <div class="absolute top-32 right-10 w-72 h-72 rounded-full bg-brand-blue/20 blur-3xl animate-float"></div>
+  <div class="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-brand-green/20 blur-3xl animate-float-slow"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-up">
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+        <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+        Perusahaan Umum Daerah Air Minum Kota Mojokerto
+      </span>
+      <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
+        Melayani Kebutuhan <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-emerald-300">Air Bersih</span> untuk Kota Mojokerto
+      </h1>
+      <p class="mt-6 text-lg text-slate-200 max-w-xl leading-relaxed">
+        PERUMDAM Maja Tirta berkomitmen memberikan layanan air minum yang berkualitas, berkelanjutan, dan terpercaya bagi masyarakat Kota Mojokerto.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#pembayaran" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-sky-500 text-white font-semibold px-7 py-3.5 rounded-full shadow-xl shadow-brand-blue/40 transition-all hover:-translate-y-0.5">
+          <i class="fa-solid fa-credit-card"></i> Bayar Tagihan
+        </a>
+        <a href="#kontak" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-full transition-all">
+          <i class="fa-solid fa-phone"></i> Hubungi Kami
+        </a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-3 gap-6 max-w-lg">
+        <div>
+          <div class="text-3xl font-extrabold text-white">5K+</div>
+          <div class="text-xs text-slate-300 mt-1">Pelanggan Aktif</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-white">24/7</div>
+          <div class="text-xs text-slate-300 mt-1">Layanan Siaga</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-white">100%</div>
+          <div class="text-xs text-slate-300 mt-1">Standar Kualitas</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden lg:block" data-aos="fade-left" data-aos-delay="200">
+      <div class="relative">
+        <div class="glass-card p-6 rounded-3xl">
+          <img src="./Gambar/hero.png" alt="perumdam" class="w-full h-80 object-cover rounded-2xl" />
+        </div>
+        <div class="absolute -bottom-6 -left-6 glass-card p-5 rounded-2xl flex items-center gap-3 animate-float">
+          <div class="w-12 h-12 rounded-xl bg-brand-green/20 flex items-center justify-center">
+            <i class="fa-solid fa-shield-heart text-brand-green text-xl"></i>
+          </div>
+          <div>
+            <div class="text-white font-bold">Kualitas Terjamin</div>
+            <div class="text-xs text-slate-300">Sesuai standar nasional</div>
+          </div>
+        </div>
+        <div class="absolute -top-6 -right-6 glass-card p-5 rounded-2xl flex items-center gap-3 animate-float-slow">
+          <div class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center">
+            <i class="fa-solid fa-award text-brand-gold text-xl"></i>
+          </div>
+          <div>
+            <div class="text-white font-bold">Terpercaya</div>
+            <div class="text-xs text-slate-300">Sejak puluhan tahun</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 80" class="w-full h-16 fill-white"><path d="M0,40 C360,80 720,0 1440,40 L1440,80 L0,80 Z"></path></svg>
+  </div>
+</section>
+
+<!-- TENTANG KAMI -->
+<section id="tentang" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="grid grid-cols-2 gap-4" data-aos="fade-right">
+  
+  <!-- Kiri: Tentang Kami -->
+  <div>
+    <img src="./Gambar/TentangKami.png"
+         alt="Kantor PERUMDAM"
+         class="rounded-2xl h-full w-full object-cover shadow-lg hover-lift"
+         loading="lazy" />
+  </div>
+
+  <!-- Kanan: Struktur + Kebersamaan -->
+  <div class="flex flex-col gap-4">
+    <img src="./Gambar/Struktur Organisasi Perumdam.png"
+         alt="Struktur Organisasi"
+         class="rounded-2xl h-70 w-full object-cover shadow-lg hover-lift"
+         loading="lazy" />
+
+    <img src="./Gambar/fober.jpeg"
+         alt="Kebersamaan"
+         class="rounded-2xl h-45 w-full object-cover shadow-lg hover-lift"
+         loading="lazy" />
+  </div>
+
+</div>
+
+    <div data-aos="fade-left">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-semibold">
+        <i class="fa-solid fa-building"></i> TENTANG KAMI
+      </span>
+      <h2 class="mt-4 text-3xl md:text-4xl font-extrabold text-brand-navy leading-tight">
+        Penyedia Air Bersih Terpercaya untuk Masyarakat Kota Mojokerto
+      </h2>
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        Perumdam Maja Tirta Mojokerto merupakan perusahaan daerah yang bergerak di bidang penyediaan air bersih untuk masyarakat kota Mojokerto.
+        Dengan komitmen terhadap kualitas dan pelayanan, kami berupaya memberikan akses air bersih
+        yang berkelanjutan demi kesejahteraan bersama.
+      </p>
+
+      <div class="mt-6 space-y-4">
+        <div class="p-6 rounded-2xl border border-slate-100 bg-gradient-to-br from-sky-50 to-white shadow-sm hover-lift">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-blue text-white flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-brand-navy text-lg">Visi</h3>
+              <p class="mt-1 text-slate-600 text-sm">Menjadi perusahaan penyedia air minum yang profesional, sehat, mandiri, dan berorientasi pada kepuasan pelanggan.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-100 bg-gradient-to-br from-emerald-50 to-white shadow-sm hover-lift">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-green text-white flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-brand-navy text-lg">Misi</h3>
+              <ul class="mt-2 space-y-1.5 text-slate-600 text-sm">
+                <li class="flex gap-2"><i class="fa-solid fa-check text-brand-green mt-1"></i> Menyediakan air minum yang memenuhi standar kualitas.</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-brand-green mt-1"></i> Meningkatkan kualitas pelayanan pelanggan.</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-brand-green mt-1"></i> Mengembangkan infrastruktur secara berkelanjutan.</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-brand-green mt-1"></i> Mendukung pembangunan Kota Mojokerto.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN PELANGGAN -->
+<section id="layanan" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-semibold">
+        <i class="fa-solid fa-headset"></i> LAYANAN PELANGGAN
+      </span>
+      <h2 class="mt-4 text-3xl md:text-4xl font-extrabold text-brand-navy">Layanan Pelanggan</h2>
+      <p class="mt-3 text-slate-600">Kami siap membantu kebutuhan dan keluhan pelanggan.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-5 gap-8">
+      <!-- Form -->
+      <div class="lg:col-span-3 bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/60 border border-slate-100" data-aos="fade-right">
+        <h3 class="text-xl font-bold text-brand-navy flex items-center gap-2"><i class="fa-solid fa-pen-to-square text-brand-blue"></i> Form Aduan Pelanggan</h3>
+        <p class="text-sm text-slate-500 mt-1">Sampaikan keluhan atau pertanyaan Anda dengan lengkap.</p>
+
+        <form id="aduan-form" method="POST" class="mt-6 grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs font-semibold text-slate-700">Nama Lengkap</label>
+            <input type="text" id="inputNama" required class="form-input" placeholder="Nama Lengkap Anda" />
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-slate-700">Nomor Pelanggan</label>
+            <input type="text" id="inputPelanggan" required class="form-input" placeholder="Nomor Pelanggan Anda" />
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-slate-700">Nomor Telepon</label>
+            <input type="tel" id="inputTelepon" required class="form-input" placeholder="08xxxxxxxxxxx" />
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-slate-700">Alamat</label>
+            <input type="text" id="inputAlamat" required class="form-input" placeholder="Jl. ..." />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="text-xs font-semibold text-slate-700">Kategori Aduan</label>
+            <select id="JenisPengaduan" required class="form-input">
+              <option value="">-- Pilih Kategori --</option>
+              <option>Air Keluar Kecil</option>
+              <option>Air Kotor</option>
+              <option>Air Tidak Keluar</option>
+              <option>Meter Macet / Rusak</option>
+              <option>Pemindahan Meter</option>
+              <option>Pipa Bocor</option>
+              <option>Stop Kran Bocor</option>
+              <option>Stop Kran Rusak</option>
+              <option>Tagihan</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="text-xs font-semibold text-slate-700">Deskripsi Aduan</label>
+            <textarea id="DeskripsiPengaduan" rows="4" required class="form-input"
+              placeholder="Jelaskan aduan Anda..."></textarea>
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit"
+              class="w-full bg-gradient-to-r from-brand-blue to-brand-green text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-brand-blue/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Kirim Aduan
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="lg:col-span-2 grid sm:grid-cols-2 lg:grid-cols-1 gap-4" data-aos="fade-left">
+        <div class="service-card">
+          <div class="service-icon bg-sky-100 text-brand-blue"><i class="fa-solid fa-droplet-slash"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Pengaduan Kebocoran</h4>
+            <p class="text-xs text-slate-500 mt-1">Laporkan kebocoran pipa untuk penanganan cepat.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon bg-emerald-100 text-brand-green"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Gangguan Distribusi</h4>
+            <p class="text-xs text-slate-500 mt-1">Informasi terkait gangguan suplai air ke rumah Anda.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon bg-amber-100 text-brand-gold"><i class="fa-solid fa-plug-circle-plus"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Sambungan Baru</h4>
+            <p class="text-xs text-slate-500 mt-1">Ajukan permohonan pemasangan sambungan baru.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon bg-indigo-100 text-indigo-600"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Informasi Tagihan</h4>
+            <p class="text-xs text-slate-500 mt-1">Cek dan tanyakan informasi tagihan air Anda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEMBAYARAN -->
+<section id="pembayaran" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-semibold">
+        <i class="fa-solid fa-wallet"></i> PEMBAYARAN
+      </span>
+      <h2 class="mt-4 text-3xl md:text-4xl font-extrabold text-brand-navy">Kemudahan Pembayaran Tagihan</h2>
+      <p class="mt-3 text-slate-600">Bayar tagihan air Anda melalui berbagai kanal resmi yang telah bekerja sama dengan PERUMDAM Maja Tirta.</p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-2" data-aos="fade-up">
+      <button class="pay-tab active" data-tab="bank">Perbankan</button>
+      <button class="pay-tab" data-tab="retail">Retail / Minimarket</button>
+      <button class="pay-tab" data-tab="ecommerce">E-Commerce</button>
+      <button class="pay-tab" data-tab="ewallet">E-Wallet</button>
+      <button class="pay-tab" data-tab="distributorpulsa">Distributor Pulsa</button>
+      <button class="pay-tab" data-tab="transportasi">Transportasi</button>
+    </div>
+
+    <div class="mt-10">
+      <div class="pay-panel grid grid-cols-2 sm:grid-cols-3 gap-4" data-panel="bank">
+        <div class="pay-logo"><span class="font-extrabold text-blue-700 text-lg">BRI</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-yellow-500 text-lg">Sinarmas</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-orange-500 text-lg">BCA</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-sky-500 text-lg">BTN</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-green-500 text-lg">BTN-Syariah</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-red-600 text-lg">Mybank</span></div>
+      </div>
+      <div class="pay-panel hidden grid-cols-2 sm:grid-cols-3 gap-4" data-panel="retail">
+        <div class="pay-logo"><span class="font-extrabold text-red-600 text-lg">Alfamart</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-orange-600 text-lg">Alfamidi</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-blue-600 text-lg">Indomaret</span></div>
+      </div>
+      <div class="pay-panel hidden grid-cols-2 sm:grid-cols-3 gap-4" data-panel="ecommerce">
+        <div class="pay-logo"><span class="font-extrabold text-sky-600 text-lg">Shopee</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-green-600 text-lg">Tokopedia</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-blue-600 text-lg">Blibli</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-red-500 text-lg">Bukalapak</span></div>
+      </div>
+      <div class="pay-panel hidden grid-cols-2 sm:grid-cols-3 gap-4" data-panel="ewallet">
+        <div class="pay-logo"><span class="font-extrabold text-sky-500 text-lg">DANA</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-green-600 text-lg">GoPay</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-red-500 text-lg">LinkAja</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-orange-500 text-lg">Griya Bayar</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-purple-600 text-lg">Ges Pay</span></div>
+      </div>
+       <div class="pay-panel hidden grid-cols-2 sm:grid-cols-3 gap-4" data-panel="distributorpulsa">
+        <div class="pay-logo"><span class="font-extrabold text-red-500 text-lg">Alfatrans Pulsa</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-blue-600 text-lg">Family Pulsa</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-yellow-500 text-lg">Istana Reload</span></div>
+        <div class="pay-logo"><span class="font-extrabold text-green-500 text-lg">Morena Pulsa</span></div>
+      </div>
+      <div class="pay-panel hidden grid-cols-2 sm:grid-cols-3 gap-4" data-panel="transportasi">
+        <div class="pay-logo"><span class="font-extrabold text-green-500 text-lg">Gojek</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMASI -->
+<section id="informasi" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-6" data-aos="fade-up">
+      <div class="max-w-xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-semibold">
+          <i class="fa-solid fa-newspaper"></i> INFORMASI
+        </span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-extrabold text-brand-navy">Informasi & Pengumuman</h2>
+        <p class="mt-3 text-slate-600">Update terbaru seputar layanan, pemeliharaan, dan tips dari PERUMDAM Maja Tirta.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 swiper info-swiper" data-aos="fade-up">
+      <div class="swiper-wrapper pb-12">
+        <div class="swiper-slide">
+          <article class="info-card">
+            <img src="./Informasi/Alur Pendaftaran Pelanggan Baru.png" alt="Alur Pendaftaran"
+            class="info-image" data-img="./Informasi/Alur Pendaftaran Pelanggan Baru.png" />
+            <div class="p-6">
+              <span class="info-tag bg-sky-100 text-brand-blue">Pengumuman</span>
+              <h3 class="info-title">Alur Menjadi Pelanggan</h3>
+              <p class="info-desc">Langkah-langkah untuk menjadi pelanggan baru PERUMDAM Maja Tirta.</p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="info-card">
+            <img src="./Informasi/Alur Pemutusan Langganan.png" alt="Alur Pemutusan Langganan" 
+            class="info-image" data-img="./Informasi/Alur Pemutusan Langganan.png" />
+            <div class="p-6">
+              <span class="info-tag bg-amber-100 text-brand-gold">Pengumuman</span>
+              <h3 class="info-title">Alur Pemutusan Langganan</h3>
+              <p class="info-desc">Langkah-langkah untuk berhenti menggunakan layanan PERUMDAM Maja Tirta.</p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="info-card">
+            <img src="./Informasi/Alur Pembayaran rekening Air.png" alt="Alur Pembayaran Rekening Air"
+            class="info-image" data-img="./Informasi/Alur Pembayaran Rekening Air.png" />
+            <div class="p-6">
+              <span class="info-tag bg-indigo-100 text-indigo-600">Pengumuman</span>
+              <h3 class="info-title">Alur Pembayaran Rekening Air</h3>
+              <p class="info-desc">Langkah-langkah untuk membayar rekening air beserta metode pembayaran.</p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="info-card">
+            <img src="./Informasi/Tips Hemat Air.png" alt="Tips Hemat Air"
+            class="info-image" data-img="./Informasi/Tips Hemat Air.png" />
+            <div class="p-6">
+              <span class="info-tag bg-emerald-100 text-brand-green">Tips</span>
+              <h3 class="info-title">Tpis menghemat air</h3>
+              <p class="info-desc">Bagaimana cara kita untuk menghemat penggunaan air.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<!-- Modal Image -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+  <span class="absolute top-4 right-6 text-white text-2xl cursor-pointer" id="closeModal">&times;</span>
+  <img id="modalImage" src="" class="max-h-[80vh] rounded-lg shadow-lg" />
+</div>
+
+<!-- KONTAK -->
+<section id="kontak" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-semibold">
+        <i class="fa-solid fa-envelope"></i> KONTAK
+      </span>
+      <h2 class="mt-4 text-3xl md:text-4xl font-extrabold text-brand-navy">Hubungi Kami</h2>
+      <p class="mt-3 text-slate-600">Kami siap melayani Anda di hari kerja. Sampaikan pertanyaan, saran, atau kunjungi kantor kami.</p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-2 gap-10">
+      <div class="space-y-4" data-aos="fade-right">
+        <div class="contact-item">
+          <div class="contact-icon bg-brand-blue"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Alamat Kantor</h4>
+            <p class="text-slate-600 text-sm mt-1">Jl. Pahlawan No.40, Kranggan, Kec. Prajurit Kulon, Kota Mojokerto 61321</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon bg-brand-green"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Telepon</h4>
+            <p class="text-slate-600 text-sm mt-1">(0321) 329011</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon bg-brand-gold"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Email</h4>
+            <p class="text-slate-600 text-sm mt-1">perumdamkotamjk@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon bg-indigo-600"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <h4 class="font-bold text-brand-navy">Jam Operasional</h4>
+            <p class="text-slate-600 text-sm mt-1">Senin – Kamis • 07.30 – 15.30 WIB</p>
+            <p class="text-slate-600 text-sm mt-1">Jumat • 07.00 – 15.00 WIB</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="rounded-3xl overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-100 relative" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=Jl.+Pahlawan+No.40,+Kota+Mojokerto&output=embed" class="w-full h-96 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Jl.+Pahlawan+No.40,+Kota+Mojokerto" target="_blank" rel="noopener" class="absolute bottom-4 right-4 inline-flex items-center gap-2 bg-white text-brand-navy font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-brand-blue hover:text-white transition-all">
+          <i class="fa-solid fa-diamond-turn-right"></i> Petunjuk Arah
+        </a>
+      </div> -->
+      <div class="rounded-3xl overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-100 relative" data-aos="fade-left">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.8785283216166!2d112.43664751012085!3d-7.47866369250203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780d84948631c3%3A0xa3ea1fa864175c33!2sPDAM%20Kota%20Mojokerto!5e0!3m2!1sid!2sid!4v1766459748791!5m2!1sid!2sid" 
+          class="w-full h-96 border-0" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a 
+          href="https://www.google.com/maps/dir/?api=1&destination=PDAM%20Kota%20Mojokerto" 
+          target="_blank" 
+          rel="noopener" 
+          class="absolute bottom-4 right-4 inline-flex items-center gap-2 bg-white text-brand-navy font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-brand-blue hover:text-white transition-all">
+          <i class="fa-solid fa-diamond-turn-right"></i> Petunjuk Arah
+        </a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-brand-navy text-slate-300 pt-16 pb-8 relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-blue/10 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-brand-green/10 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-blue to-brand-green flex items-center justify-center">
+          <img src="./Gambar/Logo Perumdam Mojokerto.png" alt="Logo" width="70">
+          <!-- <i class="fa-solid fa-droplet text-white"></i> -->
+        </div>
+        <div class="leading-tight">
+          <div class="font-extrabold text-white">PERUMDAM</div>
+          <div class="text-xs text-slate-400 -mt-0.5">Maja Tirta Mojokerto</div>
+        </div>
+      </div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-400">
+        PERUMDAM Maja Tirta merupakan perusahaan daerah penyedia layanan air minum bagi masyarakat Kota Mojokerto.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-white font-bold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#beranda" class="footer-link">Beranda</a></li>
+        <li><a href="#tentang" class="footer-link">Tentang Kami</a></li>
+        <li><a href="#layanan" class="footer-link">Layanan</a></li>
+        <li><a href="#pembayaran" class="footer-link">Pembayaran</a></li>
+        <li><a href="#informasi" class="footer-link">Informasi</a></li>
+        <li><a href="#kontak" class="footer-link">Hubungi Kami</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-bold mb-4">Kontak</h4>
+      <ul class="space-y-2 text-sm text-slate-400">
+        <li><i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> Jl. Pahlawan No.40, Kranggan, Kec. Prajurit Kulon, Kota Mojokerto 61321</li>
+        <li><i class="fa-solid fa-phone text-brand-blue mr-2"></i> (0321) 329011</li>
+        <li><i class="fa-solid fa-envelope text-brand-blue mr-2"></i> perumdamkotamjk@gmail.com</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-bold mb-4">Ikuti Kami</h4>
+      <div class="flex gap-3">
+        <a href="https://www.facebook.com/majatirta/" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/perumdam_majatirta/" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-white/10 text-center text-xs text-slate-400">
+    © 2026 PERUMDAM Maja Tirta Kota Mojokerto. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-brand-blue text-white shadow-xl shadow-brand-blue/40 opacity-0 invisible transition-all hover:-translate-y-1 z-40">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div id="toast-notif" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-500 ease-in-out">
+  <div class="flex items-center gap-3 bg-slate-900 text-white px-5 py-4 rounded-xl shadow-2xl border border-slate-800">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500 text-white">
+      <i class="fa-solid fa-check text-sm"></i>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm">Aduan Terkirim!</h4>
+      <p class="text-xs text-slate-400">Terima kasih, laporan Anda telah diteruskan ke WhatsApp.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
